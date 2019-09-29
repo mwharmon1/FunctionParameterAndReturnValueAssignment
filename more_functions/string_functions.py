@@ -7,7 +7,13 @@ entered by user.
 
 
 def multiply_string(message, n):
-    pass
+    """
+    this function will accept 2 args and return a string message
+    :param message: word to be multiplied by n
+    :param n: amount of times message will display in single string
+    :return: message multiplied by n in string
+    """
+    return message * int(n)
 
 
 if __name__ == '__main__':
