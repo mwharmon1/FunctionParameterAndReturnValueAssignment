@@ -21,4 +21,4 @@ def score_input(test_name, test_score=0, invalid_message='Invalid test score, tr
 
 
 if __name__ == '__main__':
-    score_input("MathTest")
+    score_input("Test")
