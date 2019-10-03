@@ -14,8 +14,10 @@ def score_input(test_name, test_score=0, invalid_message='Invalid test score, tr
     :param invalid_message: message to display when bad input ocurrs
     :return: test name: test score
     """
-    return test_name + ": " + str(test_score)
-
+    if 0 < test_score <= 100:
+        return test_name + ": " + str(test_score)
+    else:
+        return invalid_message
 
 # pass
 
