@@ -12,17 +12,17 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(v.score_input("Unit4", test_score=80), 'Unit4: 80')
 
     def test_score_input_test_score_below_range(self):
-        self.assertEqual(v.score_input("Unit1", -10), 'Invalid test score, try again!')
+        self.assertEqual(v.score_input("Unit1", test_score=-10), 'Invalid test score, try again!')
 
     def test_score_input_test_score_above_range(self):
-        self.assertEqual(v.score_input("PythonTest", 112), 'Invalid test score, try again!')
+        self.assertEqual(v.score_input("PythonTest", test_score=112), 'Invalid test score, try again!')
 
     def test_test_score_non_numeric(self):
-        self.assertEqual(v.score_input("Unit5", 'Value'), ValueError)
+        self.assertEqual(v.score_input("Unit5", 'NonNumeric'), 'Invalid test score, try again!')
 
     # all args test
     def test_score_input_invalid_message(self):
-        self.assertEqual(v.score_input("ScienceTest", 'Invalid'), 'Invalid test score, try again!')
+        self.assertEqual(v.score_input("ScienceTest", test_score=101), 'Invalid test score, try again!')
 
 
 if __name__ == '__main__':

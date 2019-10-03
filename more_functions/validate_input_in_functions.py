@@ -10,17 +10,20 @@ def score_input(test_name, test_score=0, invalid_message='Invalid test score, tr
     """
     validate input and return test name and test score in string
     :param test_name: name of test input by user
-    :param test_score: default of 0 if not test score is input by user
-    :param invalid_message: message to display when bad input ocurrs
+    :param test_score: default of 0 if no test score is input by user
+    :param invalid_message: message to display when bad input occurs
     :return: test name: test score
     """
-    if 0 < test_score <= 100:
-        return test_name + ": " + str(test_score)
-    else:
+    try:
+        test_score = int(test_score)
+    except ValueError:
         return invalid_message
 
-# pass
+    if test_score < 0 or test_score > 100:
+        return invalid_message
+    else:
+        return test_name + ": " + str(test_score)
 
 
 if __name__ == '__main__':
-    score_input("Test")
+    print(score_input('TestName', 88))
