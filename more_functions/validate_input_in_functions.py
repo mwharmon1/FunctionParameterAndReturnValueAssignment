@@ -14,9 +14,11 @@ def score_input(test_name, test_score=0, invalid_message='Invalid test score, tr
     :param invalid_message: message to display when bad input ocurrs
     :return: test name: test score
     """
-    # return { test_name: test_score}
-    pass
+    return test_name + ": " + str(test_score)
+
+
+# pass
 
 
 if __name__ == '__main__':
-    score_input("test", 100, "test")
+    score_input("MathTest")
